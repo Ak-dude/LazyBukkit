@@ -29,3 +29,37 @@
 *.ipr
 *.iws
 .idea/
+
+# LazyBukkit build artifacts
+/lib/
+/target/
+
+# Paper server runtime (generated on first launch)
+/.lazybukkit/
+/plugins/
+/world*/
+/logs/
+/cache/
+/libraries/
+/versions/
+/eula.txt
+/server.properties
+/bukkit.yml
+/spigot.yml
+/paper.yml
+/config/
+/paper-global.yml
+/paper-world-defaults.yml
+*.log
+
+# Server directory runtime files
+/server/.lazybukkit/
+/server/plugins/
+/server/world*/
+/server/logs/
+/server/cache/
+/server/libraries/
+/server/versions/
+/server/eula.txt
+/server/server.properties
+/server/buildtools/

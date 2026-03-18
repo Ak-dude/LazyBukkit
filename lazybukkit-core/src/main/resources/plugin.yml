@@ -1,0 +1,46 @@
+name: LazyBukkit-Core
+version: 1.0.0
+main: org.bukkit.lazybukkit.core.LazyBukkitPlugin
+description: Core implementation of LazyBukkit APIs - performance monitoring, vanilla testing, and developer tools.
+author: coolcreep
+load: STARTUP
+
+commands:
+  lazytest:
+    description: Run vanilla mechanics verification tests
+    usage: /<command> [category|list]
+    permission: lazybukkit.test
+  lazyinspect:
+    description: Inspect a block or entity
+    usage: /<command> [block|entity|redstone]
+    permission: lazybukkit.inspect
+  lazyperf:
+    description: View server performance metrics
+    usage: /<command> [tps|memory|snapshot]
+    permission: lazybukkit.perf
+  lazyalert:
+    description: Configure server alerts
+    usage: /<command> [list|set|clear]
+    permission: lazybukkit.alert
+
+permissions:
+  lazybukkit.*:
+    description: All LazyBukkit permissions
+    default: op
+    children:
+      lazybukkit.test: true
+      lazybukkit.inspect: true
+      lazybukkit.perf: true
+      lazybukkit.alert: true
+  lazybukkit.test:
+    description: Run vanilla mechanics tests
+    default: op
+  lazybukkit.inspect:
+    description: Inspect blocks and entities
+    default: op
+  lazybukkit.perf:
+    description: View performance metrics
+    default: op
+  lazybukkit.alert:
+    description: Configure server alerts
+    default: op
